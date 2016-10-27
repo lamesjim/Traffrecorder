@@ -13,12 +13,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/css',express.static(path.join(__dirname, '../client/css')));
-app.use('/js',express.static(path.join(__dirname, '../client/js')));
+app.use('/css',express.static(path.join(__dirname, '../client/web/css')));
+app.use('/js',express.static(path.join(__dirname, '../client/web/js')));
 app.use('/templates',express.static(path.join(__dirname, '../client/js/templates')));
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, '../client', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/web', 'index.html'));
 });
 
 module.exports = app;

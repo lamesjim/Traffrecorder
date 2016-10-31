@@ -1,6 +1,105 @@
-.hello {
-  background-color: red;
+body {
+  overflow: auto;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  background: #f5f4f5; }
+
+html {
+  overflow: hidden;
+  height: 100%; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+header {
+  background: url("../assets/traffic.jpg") no-repeat center bottom fixed;
+  height: 150px;
+  max-width: 100%; }
+  header nav {
+    text-align: center;
+    color: #f5f4f5;
+    padding: 20px; }
+    @media (max-width: 650px) {
+      header nav {
+        font-size: 14px; } }
+    header nav p {
+      line-height: 150%; }
+  header .header-overlay {
+    background: rgba(39, 62, 84, 0.52);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2; }
+
+h2 {
   font-family: "Roboto", sans-serif; }
 
-.world {
-  font-family: "Lato", sans-serif; }
+.container {
+  width: 90%;
+  margin: 25px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#map {
+  width: 50%;
+  height: 350px;
+  min-width: 350px;
+  display: inline-block; }
+  @media (max-width: 777px) {
+    #map {
+      width: 85%; } }
+
+.map-form {
+  height: auto;
+  width: 50%;
+  min-width: 350px;
+  display: inline-block;
+  padding: 30px; }
+  @media (max-width: 777px) {
+    .map-form {
+      padding: 15px;
+      font-size: 14px; } }
+  .map-form label {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 20px; }
+  .map-form .dest {
+    width: 50%; }
+  .map-form .time {
+    width: 35%; }
+  .map-form button {
+    display: block; }
+
+.traffic-log {
+  width: 80%;
+  margin: 2% auto; }
+  @media (max-width: 777px) {
+    .traffic-log {
+      margin: 0 auto; } }
+  .traffic-log table {
+    margin: 0 auto;
+    width: 100%; }
+    .traffic-log table tbody tr:hover {
+      background-color: rgba(245, 238, 163, 0.7); }
+    .traffic-log table thead th {
+      background-color: #9fdfca;
+      color: black; }
+    .traffic-log table tr:nth-child(even) {
+      background: rgba(179, 179, 179, 0.8); }
+
+.right-panel {
+  width: 500px;
+  height: 500px; }

@@ -1,2 +1,54 @@
-<h1 class="hello">Hello, World!</h1>
-<h1 class="world">Hello, World!</h1>
+<header>
+    <div class="header-overlay">
+        <nav>
+            <h2>Welcome to TraffRecorder</h2>
+            <p>Moving cities or changing jobs and not sure when is the best time to commute? Enter start/end addresses and time of day to record to get a traffic log</p>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <div id="map"></div>
+    <div class="map-form">
+        <form>
+            <label>Starting Point</label><input class="dest" type="text">
+            <label>Destination</label><input class="dest" type="text">
+            <label>Start Time</label><input type="time">
+            <label>End Time</label><input type="time">
+            <button ng-click="clicky()" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="traffic-log">
+        <div id="right-panel"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="data-column">Column 1</th>
+                    <th class="data-column">Column 2</th>
+                    <th class="data-column">Column 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="data-column">1</td>
+                    <td class="data-column">Data 1</td>
+                    <td class="data-column">Data 2</td>
+                </tr>
+                <tr>
+                    <td class="data-column">2</td>
+                    <td class="data-column">Data 3</td>
+                    <td class="data-column">Data 4</td>
+                </tr>
+                <tr>
+                    <td class="data-column">3</td>
+                    <td class="data-column">Data 5</td>
+                    <td class="data-column">Data 6</td>
+                </tr>
+                <tr>
+                    <td class="data-column">4</td>
+                    <td class="data-column">Data 7</td>
+                    <td class="data-column">Data 8</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

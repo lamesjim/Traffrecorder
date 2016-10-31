@@ -1,11 +1,114 @@
+// Colors
+$light-grey:    #a5a5a5
+$opaque-grey-blue: rgba(39,62,84,0.52)
+$shade-white:     #f5f4f5
+$white: #ffffff
+
 // Fonts
 $roboto: 'Roboto', sans-serif
 $lato-light: 'Lato', sans-serif
 
+// Mixins
+@mixin flex($dir: row, $wrap: wrap, $justify: center, $align: center)
+  display: flex
+  flex-flow: $dir $wrap
+  justify-content: $justify
+  align-items: $align
 
-.hello
-    background-color: red
+
+body
+    overflow: auto
+    height: 100%
+    font-family: $lato-light
+    background: $shade-white
+
+html
+    overflow: hidden
+    height: 100%
+
+*
+    box-sizing: border-box
+
+header
+    background: url('../assets/traffic.jpg') no-repeat center bottom fixed
+    height: 150px
+    max-width: 100%
+
+    nav
+        text-align: center
+        color: $shade-white
+        padding: 20px
+        @media(max-width: 650px)
+            font-size: 14px
+
+        p
+            line-height: 150%
+
+    .header-overlay
+        background: $opaque-grey-blue
+        overflow: hidden
+        height: 100%
+        z-index: 2
+
+h2
     font-family: $roboto
 
-.world
-    font-family: $lato-light
+.container
+    width: 90%
+    margin: 25px auto
+    @include flex
+
+#map
+    width: 50%
+    height: 350px
+    min-width: 350px
+    @media(max-width: 777px)
+        width: 85%
+    display: inline-block
+
+.map-form
+    height: auto
+    width: 50%
+    min-width: 350px
+    display: inline-block
+    padding: 30px
+    @media(max-width: 777px)
+        padding: 15px
+        font-size: 14px
+
+    label
+        display: inline-block
+        width: 50%
+        margin-bottom: 20px
+
+    .dest
+        width: 50%
+
+    .time
+        width: 35%
+
+    button
+        display: block
+
+.traffic-log
+    width: 80%
+    margin: 2% auto
+    @media(max-width: 777px)
+        margin: 0 auto
+
+    table
+        margin: 0 auto
+        width: 100%
+
+        tbody tr:hover
+            background-color: hsla(55, 80%, 80%, 0.7)
+
+        thead th
+            background-color: hsla(160, 50%, 75%, 1)
+            color: black
+
+        tr:nth-child(even)
+            background: hsla(1, 0%, 70%, 0.8)
+.right-panel
+    width: 500px
+    height: 500px
